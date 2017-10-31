@@ -219,10 +219,10 @@ struct ion_handle_data {
  *
  * This works just like the regular cmd and arg fields of an ioctl.
  */
-struct ion_custom_data {
+/*struct ion_custom_data {
 	unsigned int cmd;
 	unsigned long arg;
-};
+}; */
 
 #define ION_IOC_MAGIC		'I'
 
@@ -232,7 +232,7 @@ struct ion_custom_data {
  * Takes an ion_allocation_data struct and returns it with the handle field
  * populated with the opaque handle for the allocation.
  */
-#define ION_IOC_ALLOC		_IOWR(ION_IOC_MAGIC, 0, \
+//#define ION_IOC_ALLOC		_IOWR(ION_IOC_MAGIC, 0, \
 				      struct ion_allocation_data)
 
 /**
@@ -240,7 +240,7 @@ struct ion_custom_data {
  *
  * Takes an ion_handle_data struct and frees the handle.
  */
-#define ION_IOC_FREE		_IOWR(ION_IOC_MAGIC, 1, struct ion_handle_data)
+//#define ION_IOC_FREE		_IOWR(ION_IOC_MAGIC, 1, struct ion_handle_data)
 
 /**
  * DOC: ION_IOC_MAP - get a file descriptor to mmap
@@ -250,7 +250,7 @@ struct ion_custom_data {
  * descriptor open in the current address space.  This file descriptor
  * can then be used as an argument to mmap.
  */
-#define ION_IOC_MAP		_IOWR(ION_IOC_MAGIC, 2, struct ion_fd_data)
+//#define ION_IOC_MAP		_IOWR(ION_IOC_MAGIC, 2, struct ion_fd_data)
 
 /**
  * DOC: ION_IOC_SHARE - creates a file descriptor to use to share an allocation
@@ -261,7 +261,7 @@ struct ion_custom_data {
  * can then be passed to another process.  The corresponding opaque handle can
  * be retrieved via ION_IOC_IMPORT.
  */
-#define ION_IOC_SHARE		_IOWR(ION_IOC_MAGIC, 4, struct ion_fd_data)
+//#define ION_IOC_SHARE		_IOWR(ION_IOC_MAGIC, 4, struct ion_fd_data)
 
 /**
  * DOC: ION_IOC_IMPORT - imports a shared file descriptor
@@ -270,7 +270,7 @@ struct ion_custom_data {
  * descriptor obtained from ION_IOC_SHARE and returns the struct with the handle
  * filed set to the corresponding opaque handle.
  */
-#define ION_IOC_IMPORT		_IOWR(ION_IOC_MAGIC, 5, struct ion_fd_data)
+//#define ION_IOC_IMPORT		_IOWR(ION_IOC_MAGIC, 5, struct ion_fd_data)
 
 /**
  * DOC: ION_IOC_SYNC - syncs a shared file descriptors to memory
@@ -280,7 +280,8 @@ struct ion_custom_data {
  * If necessary should be used after touching a cached buffer from the cpu,
  * this will make the buffer in memory coherent.
  */
-#define ION_IOC_SYNC		_IOWR(ION_IOC_MAGIC, 7, struct ion_fd_data)
+
+//#define ION_IOC_SYNC		_IOWR(ION_IOC_MAGIC, 7, struct ion_fd_data)
 
 /**
  * DOC: ION_IOC_INVALIDATE - invalidate a shared file descriptors
@@ -298,6 +299,6 @@ struct ion_custom_data {
  * Takes the argument of the architecture specific ioctl to call and
  * passes appropriate userdata for that ioctl
  */
-#define ION_IOC_CUSTOM		_IOWR(ION_IOC_MAGIC, 6, struct ion_custom_data)
+//#define ION_IOC_CUSTOM		_IOWR(ION_IOC_MAGIC, 6, struct ion_custom_data)
 
 #endif /* _LINUX_ION_H */
