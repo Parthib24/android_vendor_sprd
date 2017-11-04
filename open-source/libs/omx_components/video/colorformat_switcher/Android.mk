@@ -27,7 +27,7 @@ LOCAL_MODULE := libcolorformat_switcher
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_C_INCLUDES += \
-	$(TOP)/hardware/sprd/gralloc/sc8830 \
+	$(TOP)/vendor/sprd/open-source/libs/gralloc/sc8830 \
 	$(TOP)/frameworks/av/include/media/ \
 	$(TOP)/frameworks/native/include/media/openmax
 

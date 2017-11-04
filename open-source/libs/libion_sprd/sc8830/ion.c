@@ -28,12 +28,12 @@
 #include <sys/mman.h>
 #include <sys/types.h>
 
-#ifdef CONFIG_USE_SC7731C_KERNEL_HEADER
+//#ifdef CONFIG_USE_SC7731C_KERNEL_HEADER
 /* include sc7731c kernel header */
-#include <ion/sc7731c_ion.h>
-#else
+//#include <ion/sc7731c_ion.h>
+//#else
 #include <linux/ion.h>
-#endif
+//#endif
 
 #include <ion/ion.h>
 

@@ -31,7 +31,7 @@ LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/openmax \
 	frameworks/native/include/media/hardware \
 	$(LOCAL_PATH)/include \
-	$(LOCAL_PATH)/../../gralloc/$(TARGET_BOARD_PLATFORM) \
+	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2 \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/video/ \
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
