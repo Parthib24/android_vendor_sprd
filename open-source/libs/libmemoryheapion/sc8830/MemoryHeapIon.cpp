@@ -29,13 +29,13 @@
 
 #include <cutils/log.h>
 
-#include <linux/ion.h>
-#ifdef CONFIG_USE_SC7731C_KERNEL_HEADER
-/* include sc7731c kernel header */
-#include "sc7731c_ion_sprd.h"
+#ifdef USE_SCX31_KHEADER
+#include <scx31_kheader.h>
 #else
 #include <video/ion_sprd.h>
+#include <linux/ion.h>
 #endif
+
 #include "MemoryHeapIon.h"
 
 namespace android {
