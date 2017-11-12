@@ -28,12 +28,12 @@
 #include <sys/mman.h>
 #include <sys/types.h>
 
-#ifdef SCX31_ION_HEADER
-#include <ion/scx31_ion.h>
-#endif
-
+#ifdef USE_SCX31_KHEADER
+#include <scx31_kheader.h>
+#else
 #include <linux/ion.h>
-#include <ion/ion.h>
+#endif
+#include <ion.h>
 
 int ion_open()
 {
