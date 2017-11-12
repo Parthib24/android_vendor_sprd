@@ -1,4 +1,6 @@
-
+/*
+ * LIB GRALLOC (SCX30GV2)
+ */
 /* set values immediately (or vbl) but no screen update*/
 #define FB_ACTIVATE_NODISP	4
 
@@ -10,6 +12,7 @@
 #define ION_HEAP_ID_MASK_OVERLAY (1<<ION_HEAP_ID_OVERLAY)
 
 /**
+ * LIBION
  * DOC: ION_IOC_INVALIDATE - invalidate a shared file descriptors
  *
  * Deprecated in favor of using the dma_buf api's correctly (syncing
