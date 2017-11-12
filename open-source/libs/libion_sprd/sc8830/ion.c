@@ -28,13 +28,11 @@
 #include <sys/mman.h>
 #include <sys/types.h>
 
-//#ifdef CONFIG_USE_SC7731C_KERNEL_HEADER
-/* include sc7731c kernel header */
-//#include <ion/sc7731c_ion.h>
-//#else
-#include <linux/ion.h>
-//#endif
+#ifdef SCX31_ION_HEADER
+#include <ion/scx31_ion.h>
+#endif
 
+#include <linux/ion.h>
 #include <ion/ion.h>
 
 int ion_open()
