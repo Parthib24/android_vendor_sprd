@@ -9,7 +9,7 @@
 #define ION_HEAP_ID_MASK_MM	(1<<ION_HEAP_ID_MM)
 #define ION_HEAP_ID_MASK_OVERLAY (1<<ION_HEAP_ID_OVERLAY)
 
-/* LIBION */
+/* LIBION (SC8830) */
 /*
  * DOC: ION_IOC_INVALIDATE - invalidate a shared file descriptors
  *
@@ -20,7 +20,7 @@
  */
 #define ION_IOC_INVALIDATE _IOWR(ION_IOC_MAGIC, 8, struct ion_fd_data)
 
-/* LIBMEMORYHEAPION */
+/* LIBMEMORYHEAPION (SC8830) */
 typedef int ion_user_handle_t;
 
 /**

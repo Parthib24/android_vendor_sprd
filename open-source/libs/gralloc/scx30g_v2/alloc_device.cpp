@@ -42,7 +42,11 @@
 #include <ion/ion.h>
 #endif
 
-#include "ion_sprd.h"
+#ifdef USE_SCX31_KHEADER
+#include <scx31_kheader.h>
+#else
+#include <ion_sprd.h>
+#endif
 
 int g_useTileAlign = 0;
 

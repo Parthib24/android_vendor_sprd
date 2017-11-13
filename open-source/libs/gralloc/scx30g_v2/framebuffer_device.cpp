@@ -21,8 +21,6 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <sys/ioctl.h>
-#include <linux/fb.h>
-#include <linux/sync.h>
 #include <cutils/log.h>
 #include <cutils/atomic.h>
 #include <cutils/properties.h>
@@ -43,6 +41,13 @@
 #include "alloc_device.h"
 #include "gralloc_priv.h"
 #include "gralloc_helper.h"
+
+#ifdef USE_SCX31_KHEADER
+#include <scx31_kheader.h>
+#else
+#include <linux/fb.h>
+#include <linux/sync.h>
+#endif
 
 #if 0
 #include "Properties.h"
