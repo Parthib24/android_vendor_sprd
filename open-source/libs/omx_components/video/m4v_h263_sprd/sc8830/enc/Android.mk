@@ -9,11 +9,7 @@ LOCAL_C_INCLUDES := \
 	frameworks/av/media/libstagefright/include \
 	frameworks/native/include/media/openmax \
 	frameworks/native/include/media/hardware \
-	frameworks/native/include \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/video
-
-LOCAL_ADDITIONAL_DEPENDENCIES += \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+	frameworks/native/include
 
 LOCAL_CFLAGS := \
 	-DOSCL_EXPORT_REF= \

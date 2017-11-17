@@ -24,13 +24,6 @@ LOCAL_MODULE := libmemoryheapion
 LOCAL_SRC_FILES := \
 	MemoryHeapIon.cpp
 
-LOCAL_ADDITIONAL_DEPENDENCIES += \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-
-LOCAL_C_INCLUDES += \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
-	$(TOP)/vendor/sprd/open-source/include
-
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
 	$(LOCAL_PATH)/ \
 

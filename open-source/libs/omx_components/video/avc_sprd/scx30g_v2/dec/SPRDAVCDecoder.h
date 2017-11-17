@@ -180,3 +180,8 @@ private:
 
 #endif  // SPRD_AVC_DECODER_H_
 
+#ifdef AVCDECONREALSCRIPT
+enum ION_MASTER_ID {
+	ION_MM,
+};
+#endif

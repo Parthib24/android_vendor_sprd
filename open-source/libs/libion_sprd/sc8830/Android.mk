@@ -25,12 +25,15 @@ LOCAL_ADDITIONAL_DEPENDENCIES += \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_C_INCLUDES += \
-	$(LOCAL_PATH) \
+	$(LOCAL_PATH)/include \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
-	$(TOP)/vendor/sprd/open-source/include
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
 	$(LOCAL_C_INCLUDES) \
+
+ifeq ($(TARGET_USE_SC7731C_KERNEL_HEADER),true)
+LOCAL_CFLAGS += -DCONFIG_USE_SC7731C_KERNEL_HEADER
+endif
 
 LOCAL_SRC_FILES := \
 	ion.c
@@ -43,6 +46,27 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_POST_INSTALL_CMD := \
 	$(hide) mkdir -p $(TARGET_OUT_SHARED_LIBRARIES); \
-	mv -f $(TARGET_OUT_SHARED_LIBRARIES)/$(LOCAL_MODULE).so $(TARGET_OUT_SHARED_LIBRARIES)/libion.so
+	$(hide) mv -f $(TARGET_OUT_SHARED_LIBRARIES)/$(LOCAL_MODULE).so $(TARGET_OUT_SHARED_LIBRARIES)/libion.so; \
+	echo -e "\e[0;36m"Rename libion_sprd.so to libion.so
 
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := iontest_sprd
+
+LOCAL_C_INCLUDES += \
+	$(LOCAL_PATH)/include
+
+LOCAL_SRC_FILES := \
+	ion.c \
+	ion_test.c
+
+LOCAL_MODULE_TAGS := \
+	optional \
+	tests \
+
+LOCAL_SHARED_LIBRARIES := \
+	liblog \
+
+include $(BUILD_EXECUTABLE)

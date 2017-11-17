@@ -42,12 +42,6 @@
 #include <ion/ion.h>
 #endif
 
-#ifdef USE_SCX31_KHEADER
-#include <scx31_kheader.h>
-#else
-#include <ion_sprd.h>
-#endif
-
 int g_useTileAlign = 0;
 
 #if GRALLOC_SIMULATE_FAILURES

@@ -32,10 +32,6 @@ include_makefiles += $(call all-named-subdir-makefiles,sc8830)
 endif
 endif
 
-ifeq (scx15,$(TARGET_BOARD_PLATFORM))
-include_makefiles += $(call all-named-subdir-makefiles,scx15 sc8830/dec)
-endif
-
 include $(include_makefiles)
 
 include_makefiles :=

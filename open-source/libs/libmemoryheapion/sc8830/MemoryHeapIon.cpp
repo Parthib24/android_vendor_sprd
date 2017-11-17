@@ -16,6 +16,7 @@
  */
 
 #define LOG_TAG "MemoryHeapIon"
+#define MIONONREALSCRIPT
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -28,13 +29,6 @@
 #include <sys/mman.h>
 
 #include <cutils/log.h>
-
-#ifdef USE_SCX31_KHEADER
-#include <scx31_kheader.h>
-#else
-#include <video/ion_sprd.h>
-#include <linux/ion.h>
-#endif
 
 #include "MemoryHeapIon.h"
 

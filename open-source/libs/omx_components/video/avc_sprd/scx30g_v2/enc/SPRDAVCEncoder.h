@@ -149,3 +149,11 @@ private:
 }  // namespace android
 
 #endif  // SPRD_AVC_ENCODER_H_
+
+#ifdef AVCENCONREALSCRIPT
+enum ION_MASTER_ID {
+	ION_MM,
+	/*for whale iommu*/
+	ION_VSP,
+};
+#endif

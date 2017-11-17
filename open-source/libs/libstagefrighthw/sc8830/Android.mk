@@ -32,7 +32,6 @@ LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/hardware \
 	$(LOCAL_PATH)/include \
 	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2/include \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/video/ \
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := \
 	$(LOCAL_PATH)/include \

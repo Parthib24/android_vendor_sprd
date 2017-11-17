@@ -10,11 +10,7 @@ LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/openmax \
 	frameworks/native/include/media/hardware \
 	frameworks/native/include \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/video \
 	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2
-
-LOCAL_ADDITIONAL_DEPENDENCIES += \
-	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS := \
 	-DOSCL_EXPORT_REF= \

@@ -35,3 +35,11 @@
 
 // Create an alloc device
 int alloc_device_open(hw_module_t const *module, const char *name, hw_device_t **device);
+
+#define FB_ACTIVATE_NODISP	4
+#define ION_HEAP_ID_SYSTEM	1
+#define ION_HEAP_ID_MM		2
+#define ION_HEAP_ID_OVERLAY	3
+#define ION_HEAP_ID_MASK_SYSTEM (1<<ION_HEAP_ID_SYSTEM)
+#define ION_HEAP_ID_MASK_MM	(1<<ION_HEAP_ID_MM)
+#define ION_HEAP_ID_MASK_OVERLAY (1<<ION_HEAP_ID_OVERLAY)

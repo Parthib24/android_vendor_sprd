@@ -3,13 +3,6 @@
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <linux/ion.h>
-
-#ifdef USE_SCX31_KERNEL_HEADER
-#include <scx31_gralloc.h>
-#endif
-
-//#include <ion_sprd.h>
-
 enum
 {
     /* OEM specific HAL formats */

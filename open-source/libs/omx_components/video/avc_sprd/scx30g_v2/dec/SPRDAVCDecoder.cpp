@@ -16,6 +16,8 @@
 
 //#define LOG_NDEBUG 0
 #define LOG_TAG "SPRDAVCDecoder"
+#define AVCDECONREALSCRIPT
+
 #include <utils/Log.h>
 
 #include "SPRDAVCDecoder.h"
@@ -31,7 +33,6 @@
 #include <colorformat_switcher.h>
 
 #include "gralloc_priv.h"
-#include "ion_sprd.h"
 #include "avc_dec_api.h"
 
 //#define VIDEODEC_CURRENT_OPT  /*only open for SAMSUNG currently*/

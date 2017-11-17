@@ -16,6 +16,8 @@
 
 #define LOG_NDEBUG 0
 #define LOG_TAG "SPRDAVCEncoder"
+#define AVCENCONREALSCRIPT
+
 #include <utils/Log.h>
 #include <arm_neon.h>
 #include "avc_enc_api.h"
@@ -39,7 +41,6 @@
 #include "MemoryHeapIon.h"
 
 #include "SPRDAVCEncoder.h"
-#include "ion_sprd.h"
 #include "gralloc_priv.h"
 
 #define VIDEOENC_CURRENT_OPT
