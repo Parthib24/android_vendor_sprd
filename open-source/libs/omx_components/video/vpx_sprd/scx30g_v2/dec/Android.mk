@@ -12,7 +12,7 @@ LOCAL_C_INCLUDES := \
 	frameworks/native/include/ui \
 	frameworks/native/include/utils \
 	frameworks/native/include/media/hardware \
-	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2
+	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2/include
 
 LOCAL_CFLAGS := \
 	-DOSCL_EXPORT_REF= \

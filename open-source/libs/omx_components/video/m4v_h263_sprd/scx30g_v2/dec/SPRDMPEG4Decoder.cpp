@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#define ONREALM4VDEC
 //#define LOG_NDEBUG 0
 #define LOG_TAG "SPRDMPEG4Decoder"
 #include <utils/Log.h>
@@ -31,7 +32,6 @@
 #include "gralloc_priv.h"
 #include "m4v_h263_dec_api.h"
 #include <dlfcn.h>
-#include "ion_sprd.h"
 
 //#define VIDEODEC_CURRENT_OPT  /*only open for SAMSUNG currently*/
 

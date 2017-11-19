@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+#define ONREALMV4ENC
 #define LOG_NDEBUG 0
 #define LOG_TAG "SPRDMPEG4Encoder"
 #include <utils/Log.h>
@@ -38,7 +39,6 @@
 #include "MemoryHeapIon.h"
 
 #include "SPRDMPEG4Encoder.h"
-#include "ion_sprd.h"
 #include "gralloc_priv.h"
 
 #define VIDEOENC_CURRENT_OPT

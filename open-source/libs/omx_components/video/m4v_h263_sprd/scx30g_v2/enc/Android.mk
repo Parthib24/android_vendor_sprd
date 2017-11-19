@@ -10,7 +10,7 @@ LOCAL_C_INCLUDES := \
 	frameworks/native/include/media/openmax \
 	frameworks/native/include/media/hardware \
 	frameworks/native/include \
-	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2
+	$(TOP)/vendor/sprd/open-source/libs/gralloc/scx30g_v2/include
 
 LOCAL_CFLAGS := \
 	-DOSCL_EXPORT_REF= \

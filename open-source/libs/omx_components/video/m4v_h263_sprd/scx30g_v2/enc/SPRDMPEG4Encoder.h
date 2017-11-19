@@ -138,3 +138,11 @@ private:
 }  // namespace android
 
 #endif  // SPRD_MPEG4_ENCODER_H_
+
+#ifdef ONREALMV4ENC
+enum ION_MASTER_ID {
+	ION_MM,
+	/*for whale iommu*/
+	ION_VSP
+};
+#endif

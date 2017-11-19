@@ -183,4 +183,8 @@ private:
 
 #endif  // SPRD_MPEG4_DECODER_H_
 
-
+#ifdef ONREALM4VDEC
+enum ION_MASTER_ID {
+	ION_MM
+};
+#endif

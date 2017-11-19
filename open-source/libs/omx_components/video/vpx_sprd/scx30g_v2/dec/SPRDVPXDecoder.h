@@ -143,3 +143,8 @@ private:
 }  // namespace android
 
 #endif  // SPRD_VPX_DECODER_H_
+#ifdef ONREALVPXDEC
+enum ION_MASTER_ID {
+	ION_MM
+};
+#endif
